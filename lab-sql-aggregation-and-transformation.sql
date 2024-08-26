@@ -10,7 +10,8 @@ select min(length) from film as min_duration;
 select max(length) from film as max_duration;
 
 select round(avg(length)) from film as Average_lengh_in_minutes;
-select floor((avg(length)/60)) from film as Average_lengh_in_Hours;
+SELECT FLOOR(AVG(length) / 60) AS avg_hours, ROUND(AVG(length) % 60) AS avg_minutes
+FROM film;
 
 
 #2. You need to gain insights related to rental dates:
